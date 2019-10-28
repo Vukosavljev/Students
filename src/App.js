@@ -1,12 +1,17 @@
 import React from 'react';
-import StudentsContainer from './components/StudentsContainer'
+import { Provider } from 'react-redux';
+
+import AppContainer from './components/AppContainer';
 import './App.scss';
+import store from './Store'
 
 function App() {
   return (
-    <div className="App">
-      <StudentsContainer />
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <AppContainer />
+      </div>
+    </Provider>
   );
 }
 
